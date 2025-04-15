@@ -1,0 +1,19 @@
+services:
+  nbc-spring-advanced-todo-mysql:
+    image: 'mysql:latest'
+
+    platform: linux/amd64
+    volumes:
+      # 정의한 Volume 컨테이너 내부 경로와 매핑
+      - nbc-spring-advanced-todo:/data
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: qwer1234
+      MYSQL_DATABASE: todo
+    command:
+      [ 'mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci', '--lower_case_table_names=1' ]
+
+# MySQL용 Volume 정의
+volumes:
+  nbc-spring-advanced-todo:
