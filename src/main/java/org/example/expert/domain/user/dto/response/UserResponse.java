@@ -1,15 +1,17 @@
 package org.example.expert.domain.user.dto.response;
 
 import lombok.Getter;
+import lombok.ToString;
 
+@ToString
 @Getter
 public class UserResponse {
 
-    private final Long id;
-    private final String email;
+	private final Long id;
+	private final String email;
 
-    public UserResponse(Long id, String email) {
-        this.id = id;
-        this.email = email;
-    }
+	public UserResponse(Long id, String email) {
+		this.id = id;
+		this.email = email;
+	}
 }

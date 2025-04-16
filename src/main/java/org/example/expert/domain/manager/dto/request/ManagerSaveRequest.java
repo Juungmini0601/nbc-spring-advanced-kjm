@@ -4,12 +4,14 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@ToString
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class ManagerSaveRequest {
 
-    @NotNull
-    private Long managerUserId; // 일정 작상자가 배치하는 유저 id
+	@NotNull
+	private Long managerUserId; // 일정 작상자가 배치하는 유저 id
 }

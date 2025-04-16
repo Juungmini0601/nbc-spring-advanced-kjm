@@ -4,14 +4,16 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@ToString
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class TodoSaveRequest {
 
-    @NotBlank
-    private String title;
-    @NotBlank
-    private String contents;
+	@NotBlank
+	private String title;
+	@NotBlank
+	private String contents;
 }
